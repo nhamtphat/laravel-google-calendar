@@ -4,8 +4,8 @@ namespace Spatie\GoogleCalendar;
 
 use Google_Client;
 use Google_Service_Calendar;
-use Spatie\GoogleCalendar\Exceptions\InvalidConfiguration;
 use Illuminate\Support\Facades\Auth;
+use Spatie\GoogleCalendar\Exceptions\InvalidConfiguration;
 
 class GoogleCalendarFactory
 {

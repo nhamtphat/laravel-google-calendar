@@ -105,7 +105,7 @@ class EventTest extends TestCase
     {
         $this->event->source = [
             'title' => 'Test Source Title',
-            'url'   => 'http://testsource.url',
+            'url' => 'http://testsource.url',
         ];
 
         $this->assertEquals('Test Source Title', $this->event->googleEvent->getSource()->title);
@@ -117,8 +117,8 @@ class EventTest extends TestCase
     {
         $attendees = [
             [
-                'name'    => 'Spatie',
-                'email'   => 'spatie@example.com',
+                'name' => 'Spatie',
+                'email' => 'spatie@example.com',
                 'comment' => "I'm ready for this meeting",
             ],
             ['email' => 'devgummibeer@example.com'],

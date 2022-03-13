@@ -126,7 +126,7 @@ class Event
         if ($name === 'source') {
             return [
                 'title' => $this->googleEvent->getSource()->title,
-                'url'   => $this->googleEvent->getSource()->url,
+                'url' => $this->googleEvent->getSource()->url,
             ];
         }
 
@@ -209,8 +209,8 @@ class Event
     public function addAttendee(array $attendee)
     {
         $this->attendees[] = new Google_Service_Calendar_EventAttendee([
-            'email'       => $attendee['email'],
-            'comment'     => $attendee['comment'] ?? null,
+            'email' => $attendee['email'],
+            'comment' => $attendee['comment'] ?? null,
             'displayName' => $attendee['name'] ?? null,
         ]);
 
@@ -269,7 +269,7 @@ class Event
     {
         $source = new Google_Service_Calendar_EventSource([
             'title' => $value['title'],
-            'url'   => $value['url'],
+            'url' => $value['url'],
         ]);
 
         $this->googleEvent->setSource($source);
@@ -278,11 +278,11 @@ class Event
     protected function getFieldName(string $name): string
     {
         return [
-            'name'          => 'summary',
-            'startDate'     => 'start.date',
-            'endDate'       => 'end.date',
+            'name' => 'summary',
+            'startDate' => 'start.date',
+            'endDate' => 'end.date',
             'startDateTime' => 'start.dateTime',
-            'endDateTime'   => 'end.dateTime',
+            'endDateTime' => 'end.dateTime',
         ][$name] ?? $name;
     }
 }
